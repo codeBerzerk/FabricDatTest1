@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кредитний Калькулятор</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+<div class="calculator">
+    <h2>Кредитний Калькулятор</h2>
+    <div class="input-group">
+        <label for="loanAmount">Сума кредиту (1000 - 50000 грн):</label>
+        <input type="number" id="loanAmount" min="1000" max="50000" step="100" value="1000">
+        <input type="range" id="loanAmountRange" min="1000" max="50000" step="100" value="1000">
+    </div>
+    <div class="input-group">
+        <label for="repaymentPeriod">Період погашення (7 - 60 днів):</label>
+        <input type="number" id="repaymentPeriod" min="7" max="60" step="1" value="7">
+        <input type="range" id="repaymentPeriodRange" min="7" max="60" step="1" value="7">
+    </div>
+    <button id="calculateButton">Отримати кредит</button>
+    <div class="result">
+        <p>Щоденне погашення: <span id="dailyRepayment">0</span> грн</p>
+        <p>Загальна сума погашення: <span id="totalRepayment">0</span> грн</p>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
